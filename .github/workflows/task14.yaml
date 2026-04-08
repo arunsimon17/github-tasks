@@ -1,25 +1,13 @@
-name: 14-Artifact-Download 
-
-on: 
+name: Artifact-Download
+on:
   push:
-    branches:
-    - main 
+    branches: 
+    - main
 
-jobs: 
+jobs:
   test:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: app
-        path: demo.txt
-
-    - name: Download artifact
-      uses: actions/download-artifact@v4 
-      with: 
-        name: app
-    
-    - name: Verify file
-      run: cat demo.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: app
