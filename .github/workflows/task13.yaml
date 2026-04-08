@@ -1,0 +1,15 @@
+name: Artifact-upload
+on:
+  push:
+    branches: 
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "data" > file.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app
+          path: file.txt
