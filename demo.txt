@@ -1,12 +1,1 @@
-hello
-hi
-bye
-
-Hii aruniii!!
-Greeting from Preethiii
-               - your all time scrum master
-
-               bye talk to you later...
-               i want my amruthhhhh 
-
-
+echo "Hello World" > file.txt
